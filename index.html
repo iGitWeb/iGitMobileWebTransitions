@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>iGitLab Code | iGitMobileWebTransitions</title>
+        <link href="transitions.css" rel="stylesheet">
+        <style>
+            body,html{width:100%;height:100%;margin:0;padding:0;overflow:hidden;}
+            .page{width:100%;height:100%;margin:0;padding:0;overflow:auto;position:absolute;top:0;left:0;z-index:98;}
+            .page.active{z-index:99;}
+            .page div{margin-bottom:40px;}
+            a{color:#333;background-color:yellow;padding:10px;}
+            #home{background-color:white;}
+            #red{background-color:red;color:#fff;}
+            #blue{background-color:blue;color:#fff;}
+            #green{background-color:green;color:#fff;}
+            #black{background-color:black;color:#fff;}
+        </style>
+    </head>
+    <body>
+        <section class="page active" id="home">
+            <div><a href="#red" ig-trans="slideUp">SlideUp</a> <code>.slideUp</code></div>
+            <div><a href="#blue" ig-trans="slideDown">SlideDown</a> <code>.slideDown</code></div>
+            <div><a href="#green" ig-trans="slideLeft">SlideLeft</a> <code>.slideLeft</code></div>
+            <div><a href="#black" ig-trans="slideRight">SlideRight</a> <code>.slideRight</code></div>
+        </section>
+        <section class="page" id="red">
+            <div><a href="#home" ig-trans="slideUp">SlideUp</a> <code>.slideUp</code></div>
+            <div><a href="#blue" ig-trans="slideDown">SlideDown</a> <code>.slideDown</code><br></div>
+            <div><a href="#green" ig-trans="slideLeft">SlideLeft</a> <code>.slideLeft</code><br></div>
+            <div><a href="#black" ig-trans="slideRight">SlideRight</a> <code>.slideRight</code><br></div>
+        </section>
+        <section class="page" id="blue">
+            <div><a href="#home" ig-trans="slideUp">SlideUp</a> <code>.slideUp</code><br></div>
+            <div><a href="#red" ig-trans="slideDown">SlideDown</a> <code>.slideDown</code><br></div>
+            <div><a href="#green" ig-trans="slideLeft">SlideLeft</a> <code>.slideLeft</code><br></div>
+            <div><a href="#black" ig-trans="slideRight">SlideRight</a> <code>.slideRight</code><br></div>
+        </section>
+        <section class="page" id="green">
+            <div><a href="#home" ig-trans="slideUp">SlideUp</a> <code>.slideUp</code><br></div>
+            <div><a href="#red" ig-trans="slideDown">SlideDown</a> <code>.slideDown</code><br></div>
+            <div><a href="#blue" ig-trans="slideLeft">SlideLeft</a> <code>.slideLeft</code><br></div>
+            <div><a href="#black" ig-trans="slideRight">SlideRight</a> <code>.slideRight</code><br></div>
+        </section>
+        <section class="page" id="black">
+            <div><a href="#home" ig-trans="slideUp">SlideUp</a> <code>.slideUp</code><br></div>
+            <div><a href="#red" ig-trans="slideDown">SlideDown</a> <code>.slideDown</code><br></div>
+            <div><a href="#blue" ig-trans="slideLeft">SlideLeft</a> <code>.slideLeft</code><br></div>
+            <div><a href="#green" ig-trans="slideRight">SlideRight</a> <code>.slideRight</code><br></div>
+        </section>
+        
+        <script src="http://zeptojs.com/zepto.min.js"></script>
+        <script src="transitions.js"></script>
+        <script>
+            $(trans.tapTransition);
+        </script>
+    </body>
+</html>
